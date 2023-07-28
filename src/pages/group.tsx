@@ -13,7 +13,7 @@ export default function group({}: Props) {
         <br />
         &nbsp;
       </div>
-      <div>
+      <div className="flex flex-col justify-center items-center  ">
         <h1 className=" font-IBMPlexSansThai font-bold">
           คุณได้รับเลือกให้เข้า
         </h1>
@@ -23,7 +23,7 @@ export default function group({}: Props) {
           alt="groupImage"
           className=" w-3/12 rounded-xl"
         />
-        <h3 className="font-salapao">กลุ่มอสรพิษวารี</h3>
+        <h3 className="font-salapao ">กลุ่มอสรพิษวารี</h3>
       </div>
     </div>
   );
