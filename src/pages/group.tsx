@@ -14,14 +14,16 @@ export default function group({}: Props) {
         &nbsp;
       </div>
       <div>
-        <h1 className="">คุณได้รับเลือกให้เข้า</h1>
+        <h1 className=" font-IBMPlexSansThai font-bold">
+          คุณได้รับเลือกให้เข้า
+        </h1>
 
         <Image
           src={groupSnake}
           alt="groupImage"
           className=" w-3/12 rounded-xl"
         />
-        <h3>กลุ่มอสรพิษวารี</h3>
+        <h3 className="font-salapao">กลุ่มอสรพิษวารี</h3>
       </div>
     </div>
   );

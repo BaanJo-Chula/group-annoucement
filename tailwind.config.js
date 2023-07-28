@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         salapao: ["SALAPAO", "sans-serif"],
+        IBMPlexSansThai: ["IBM Plex Sans Thai", "sans-serif"],
       },
     },
   },
