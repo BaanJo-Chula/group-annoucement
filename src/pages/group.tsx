@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import groupSnake from "../../public/groupImages/group-snake.jpeg";
 import Head from "next/head";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 type Props = {};
 
