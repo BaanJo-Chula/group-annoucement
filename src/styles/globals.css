@@ -5,4 +5,27 @@
 @font-face {
   font-family: "SALAPAO";
   src: url("../../public/fonts/MN-SALAPAO.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SALAPAO";
+  src: url("../../public/fonts/MN-SALAPAO-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SALAPAO";
+  src: url("../../public/fonts/MN-SALAPAO-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SALAPAO";
+  src: url("../../public/fonts/MN-SALAPAO-Bold-Italic.ttf");
+  font-weight: bold;
+  font-style: italic;
 }
