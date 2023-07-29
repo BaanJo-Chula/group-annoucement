@@ -46,7 +46,7 @@ export default function group({}: Props) {
       </div>
       <div className="flex flex-col h-screen pb-32">
         <div className="flex flex-col justify-center items-center flex-grow">
-          <h1 className=" font-IBMPlexSansThai font-bold text-[26px] sm:text-[28px] md:text-[33px]">
+          <h1 className=" font-imbthai font-bold text-[26px] sm:text-[28px] md:text-[33px]">
             คุณได้รับเลือกให้เข้า
           </h1>
 

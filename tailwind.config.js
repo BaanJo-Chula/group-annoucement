@@ -14,8 +14,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        salapao: ["SALAPAO", "sans-serif"],
-        IBMPlexSansThai: ["IBM Plex Sans Thai", "sans-serif"],
+        salapao: ["var(--font-salapao)"],
+        imbthai: ["var(--font-imbthai)"],
       },
     },
   },

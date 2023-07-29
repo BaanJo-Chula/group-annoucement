@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "SALAPAO";
   src: url("../../public/fonts/MN-SALAPAO.ttf");
   font-weight: normal;
@@ -28,4 +28,4 @@
   src: url("../../public/fonts/MN-SALAPAO-Bold-Italic.ttf");
   font-weight: bold;
   font-style: italic;
-}
+} */
