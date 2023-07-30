@@ -1,19 +1,24 @@
 import Image from "next/image";
-import groupSnake from "/public/groupImages/group-snake.jpeg";
+import groupCraneSrc from "/public/group-images/group-crane.svg";
+import groupGhopperSrc from "/public/group-images/group-ghopper.svg";
+import groupMonkeySrc from "/public/group-images/group-monkey.svg";
+import groupTigerSrc from "/public/group-images/group-tiger.svg";
+import groupViperSrc from "/public/group-images/group-viper.svg";
+
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 type Props = {};
 
 export default function group({}: Props) {
-  const group = "viper";
+  const group = "tiger";
   const element = "thunder";
 
   let imgList = {
-    tiger: "",
-    monkey: "",
-    crane: "",
-    grasshopper: "",
-    viper: groupSnake,
+    tiger: groupTigerSrc,
+    monkey: groupMonkeySrc,
+    crane: groupCraneSrc,
+    grasshopper: groupGhopperSrc,
+    viper: groupViperSrc,
   };
   const groupName = {
     tiger: "พยัคฆ์",
