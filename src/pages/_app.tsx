@@ -1,7 +1,7 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import Footer from "@/components/Footer";
-import { salapao, ibmthai } from "@/fonts/fonts";
+import Footer from '@/components/Footer';
+import { ibmthai, salapao } from '@/fonts';
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -1,54 +1,40 @@
-import Image from "next/image";
 import {
-  groupImages,
-  groupName,
   elementalImages,
   elementalName,
-} from "@/components/ImageAndElemental";
+  groupImages,
+  groupName,
+} from '@/constants/Images';
+import Image from 'next/image';
 
-import { Icon } from "@iconify/react";
-import Link from "next/link";
+import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 export default function group() {
-  const group = "mantis";
-  const element = "earth";
+  const group = 'mantis';
+  const element = 'earth';
 
   let imgSrc = groupImages[group];
   let frameSrc = elementalImages[element];
   let imgAlt = groupName[group] + elementalName[element];
 
   return (
-    <>
-      <div className="w-screen h-8 absolute top-0 left-0"></div>
-
-      <div className="min-h-screen pb-32 pt-8 flex justify-center flex-col relative">
-        <Link href="/">
-          <div className=" absolute top-8 left-0 m-1 md:m-2 w-8 sm:w-12 md:w-12 lg:w-12 ">
-            <Icon icon="ic:arrow-back" width="100%" color="rgb(185 28 28)" />
-          </div>{" "}
-        </Link>
-        <div className="flex flex-col justify-center items-center ">
-          <h1 className=" font-ibmthai font-bold text-2xl  sm:text-3xl ">
-            คุณได้รับเลือกให้เข้า
-          </h1>
-          <div className="w-7/12 sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mt-3 shadow-md shadow-gray-300 rounded-xl overflow-hidden relative">
-            <Image
-              src={frameSrc}
-              fill
-              alt="frameImage"
-              className="absolute"
-            />
-            <Image
-              src={imgSrc}
-              alt="groupImage"
-              fill
-            />
-          </div>
-          <h3 className="font-salapao font-bold sm:text-xl md:text-2xl mt-4">
-            {imgAlt}
-          </h3>
+    <div className="min-h-screen flex justify-center pb-32 items-center flex-col relative">
+      <Link href="/">
+        <Icon
+          icon="ic:arrow-back"
+          className="absolute top-8 left-8 text-3xl text-red-500"
+        />
+      </Link>
+      <div className="flex flex-col justify-center items-center gap-6">
+        <h1 className="font-ibmthai font-bold text-2xl sm:text-3xl">
+          คุณได้รับเลือกให้เข้า
+        </h1>
+        <div className="w-64 aspect-square shadow-xl rounded-xl overflow-hidden relative">
+          <Image src={frameSrc} fill alt="" className="absolute z-10" />
+          <Image src={imgSrc} alt={imgAlt} fill />
         </div>
+        <h3 className="font-salapao font-bold text-xl">{imgAlt}</h3>
       </div>
-    </>
+    </div>
   );
 }

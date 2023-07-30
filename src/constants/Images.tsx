@@ -1,15 +1,15 @@
-import groupCraneSrc from "/public/group-images/group-crane.svg";
-import groupGhopperSrc from "/public/group-images/group-mantis.svg";
-import groupMonkeySrc from "/public/group-images/group-monkey.svg";
-import groupTigerSrc from "/public/group-images/group-tigress.svg";
-import groupViperSrc from "/public/group-images/group-viper.svg";
+import groupCraneSrc from "#/group-images/group-crane.svg";
+import groupGhopperSrc from "#/group-images/group-mantis.svg";
+import groupMonkeySrc from "#/group-images/group-monkey.svg";
+import groupTigerSrc from "#/group-images/group-tigress.svg";
+import groupViperSrc from "#/group-images/group-viper.svg";
 
-import eWindSrc from "/public/elemental-images/wind.svg";
-import eEarthSrc from "/public/elemental-images/earth.svg";
-import eFireSrc from "/public/elemental-images/fire.svg";
-import eFlowerSrc from "/public/elemental-images/flower.svg";
-import eThunderSrc from "/public/elemental-images/thunder.svg";
-import eWaterSrc from "/public/elemental-images/water.svg";
+import eWindSrc from "#/elemental-images/wind.svg";
+import eEarthSrc from "#/elemental-images/earth.svg";
+import eFireSrc from "#/elemental-images/fire.svg";
+import eFlowerSrc from "#/elemental-images/flower.svg";
+import eThunderSrc from "#/elemental-images/thunder.svg";
+import eWaterSrc from "#/elemental-images/water.svg";
 
 export const groupImages = {
   tigress: groupTigerSrc,
