@@ -18,22 +18,22 @@ export default function group() {
   let imgAlt = groupName[group] + elementalName[element];
 
   return (
-    <div className="min-h-screen flex justify-center pb-32 items-center flex-col relative">
+    <div className="relative flex min-h-screen flex-col items-center justify-center pb-32">
       <Link href="/">
         <Icon
           icon="ic:arrow-back"
-          className="absolute top-8 left-8 text-3xl text-red-500"
+          className="absolute left-8 top-8 text-3xl text-red-500"
         />
       </Link>
-      <div className="flex flex-col justify-center items-center gap-6">
-        <h1 className="font-ibmthai font-bold text-2xl sm:text-3xl">
+      <div className="flex flex-col items-center justify-center gap-6">
+        <h1 className="font-ibmthai text-2xl font-bold sm:text-3xl">
           คุณได้รับเลือกให้เข้า
         </h1>
-        <div className="w-64 aspect-square shadow-xl rounded-xl overflow-hidden relative">
+        <div className="relative aspect-square w-64 overflow-hidden rounded-xl shadow-xl">
           <Image src={frameSrc} fill alt="" className="absolute z-10" />
           <Image src={imgSrc} alt={imgAlt} fill />
         </div>
-        <h3 className="font-salapao font-bold text-xl">{imgAlt}</h3>
+        <h3 className="font-salapao text-xl font-bold">{imgAlt}</h3>
       </div>
     </div>
   );
