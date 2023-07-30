@@ -13,6 +13,12 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        red: '#B11209',
+        black: '#000000',
+        white: '#FFFFFF',
+        cream: 'F5F5DC',
+      },
       fontFamily: {
         salapao: ['var(--font-salapao)'],
         ibmthai: ['var(--font-ibmthai)'],
