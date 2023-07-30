@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         salapao: ["var(--font-salapao)"],
-        imbthai: ["var(--font-imbthai)"],
+        ibmthai: ["var(--font-ibmthai)"],
       },
     },
   },

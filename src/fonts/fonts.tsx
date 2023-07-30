@@ -27,8 +27,8 @@ export const salapao = localFont({
   variable: "--font-salapao ",
 });
 
-export const imbthai = IBM_Plex_Sans_Thai({
+export const ibmthai = IBM_Plex_Sans_Thai({
   subsets: ["thai"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-imbthai",
+  variable: "--font-ibmthai",
 });

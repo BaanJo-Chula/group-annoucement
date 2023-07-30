@@ -30,7 +30,7 @@ export default function group({}: Props) {
           </div>{" "}
         </Link>
         <div className="flex flex-col justify-center items-center ">
-          <h1 className=" font-imbthai font-bold text-2xl  sm:text-3xl ">
+          <h1 className=" font-ibmthai font-bold text-2xl  sm:text-3xl ">
             คุณได้รับเลือกให้เข้า
           </h1>
           <div className="   w-7/12 sm:w-6/12 md:w-4/12 lg:w-3/12 xl:w-2/12 mt-3   shadow-md shadow-gray-300 rounded-xl overflow-hidden relative">
