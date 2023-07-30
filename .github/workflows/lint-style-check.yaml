@@ -2,7 +2,7 @@ name: Check code style and linting
 
 on:
   pull_request:
-    branches: ['main']
+    branches: ['main', 'dev']
 
   workflow_dispatch:
 
