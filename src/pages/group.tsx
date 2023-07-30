@@ -1,43 +1,21 @@
 import Image from "next/image";
-import groupCraneSrc from "/public/group-images/group-crane.svg";
-import groupGhopperSrc from "/public/group-images/group-ghopper.svg";
-import groupMonkeySrc from "/public/group-images/group-monkey.svg";
-import groupTigerSrc from "/public/group-images/group-tiger.svg";
-import groupViperSrc from "/public/group-images/group-viper.svg";
+import {
+  groupImages,
+  groupName,
+  elementalName,
+} from "../components/ImageAndElemental";
 
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+
 type Props = {};
 
 export default function group({}: Props) {
-  const group = "tiger";
+  const group = "mantis";
   const element = "thunder";
 
-  let imgList = {
-    tiger: groupTigerSrc,
-    monkey: groupMonkeySrc,
-    crane: groupCraneSrc,
-    grasshopper: groupGhopperSrc,
-    viper: groupViperSrc,
-  };
-  const groupName = {
-    tiger: "พยัคฆ์",
-    monkey: "วานร",
-    crane: "กระเรียน",
-    grasshopper: "ตั๊กแตน",
-    viper: "อสรพิษ",
-  };
-  const elementName = {
-    water: "วารี",
-    fire: "อัคคี",
-    earth: "ขุนเขา",
-    flower: "บุปผา",
-    thunder: "อัสนี",
-    wind: "พระพราย",
-  };
-
-  let imgSrc = imgList[group];
-  let imgAlt = groupName[group] + elementName[element];
+  let imgSrc = groupImages[group];
+  let imgAlt = groupName[group] + elementalName[element];
 
   return (
     <>
