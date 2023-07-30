@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <div className="absolute bottom-0 h-32 w-full bg-red">
-      <section className=" flex h-full flex-col items-center justify-center font-salapao text-white">
-        <p className=" w-auto">รับเพื่อนก้าวใหม่ 2023</p>
+      <section className="flex h-full flex-col items-center justify-center font-salapao text-white">
+        <p className="w-auto">รับเพื่อนก้าวใหม่ 2023</p>
 
         <Link
           href="https://www.instagram.com/baanjochula/"
