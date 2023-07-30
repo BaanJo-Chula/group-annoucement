@@ -46,7 +46,7 @@ export default function group({}: Props) {
       <div className="min-h-screen pb-32 pt-8 flex justify-center flex-col relative">
         <Link href="/">
           <div className=" absolute top-8 left-0 m-1 md:m-2 w-8 sm:w-12 md:w-12 lg:w-12 ">
-            <Icon icon="ic:arrow-back" width="100%" color="red" />
+            <Icon icon="ic:arrow-back" width="100%" color="rgb(185 28 28)" />
           </div>{" "}
         </Link>
         <div className="flex flex-col justify-center items-center ">
