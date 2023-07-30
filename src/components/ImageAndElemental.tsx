@@ -4,6 +4,13 @@ import groupMonkeySrc from "/public/group-images/group-monkey.svg";
 import groupTigerSrc from "/public/group-images/group-tigress.svg";
 import groupViperSrc from "/public/group-images/group-viper.svg";
 
+import eWindSrc from "/public/elemental-images/wind.svg";
+import eEarthSrc from "/public/elemental-images/earth.svg";
+import eFireSrc from "/public/elemental-images/fire.svg";
+import eFlowerSrc from "/public/elemental-images/flower.svg";
+import eThunderSrc from "/public/elemental-images/thunder.svg";
+import eWaterSrc from "/public/elemental-images/water.svg";
+
 export const groupImages = {
   tigress: groupTigerSrc,
   monkey: groupMonkeySrc,
@@ -30,10 +37,10 @@ export const elementalName = {
 };
 
 export const elementalImages = {
-  water: "",
-  fire: "",
-  earth: "",
-  flower: "",
-  thunder: "",
-  wind: "",
+  water: eWaterSrc,
+  fire: eFireSrc,
+  earth: eEarthSrc,
+  flower: eFlowerSrc,
+  thunder: eThunderSrc,
+  wind: eWindSrc,
 };
