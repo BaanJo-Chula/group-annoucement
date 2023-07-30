@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-// import salapaoPath from "../../public/localFonts/MN-SALAPAO.ttf"
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 export const salapao = localFont({
   src: [
