@@ -1,6 +1,7 @@
 import Image from "next/image";
 import groupSnake from "/public/groupImages/group-snake.jpeg";
-
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 type Props = {};
 
 export default function group({}: Props) {
@@ -35,13 +36,15 @@ export default function group({}: Props) {
 
   return (
     <>
-      <div className="bg-blue-200 absolute top-0 left-0 w-screen">
-        &nbsp;
-        <br />
-        &nbsp;
-      </div>
-      <div className="flex flex-col min-h-screen pb-32">
-        <div className="flex flex-col justify-center items-center flex-grow">
+      <div className="bg-blue-200  w-screen h-8 absolute top-0 left-0"></div>
+
+      <div className="min-h-screen pb-32 pt-8 flex justify-center flex-col relative">
+        <Link href="/">
+          <div className=" absolute top-8 left-0 m-1 md:m-2 w-8 sm:w-12 md:w-12 lg:w-12 ">
+            <Icon icon="ic:arrow-back" width="100%" color="red" />
+          </div>{" "}
+        </Link>
+        <div className="flex flex-col justify-center items-center ">
           <h1 className=" font-imbthai font-bold text-2xl  sm:text-3xl ">
             คุณได้รับเลือกให้เข้า
           </h1>
