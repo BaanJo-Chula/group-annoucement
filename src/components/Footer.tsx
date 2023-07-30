@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="bg-red-500 h-32 w-full absolute bottom-0 ">
+    <div className=" bg-red-700 h-32 w-full absolute bottom-0 ">
       <section className=" font-salapao text-white flex flex-col items-center justify-center h-full">
         <p className=" w-auto">รับเพื่อนก้าวใหม่ 2023</p>
 
