@@ -16,14 +16,17 @@ import data from '../../constants/data.json';
 export default function group() {
   
   const router = useRouter();
-  const { studentId } = router.query;
-  // console.log(studentId);
+  const  studentId = router.query.studentId as string;
+
+    let group:string = 'mantis';
+    let element:string = 'water';
+  // if(studentId in data){
+  //   // group = data[studentId]
+  // }
+
   
 
-  const group = 'mantis';
-  const element = 'earth';
-
-  let imgSrc = groupImages[group];
+  let imgSrc = groupImages[group] || "";
   let frameSrc = elementalImages[element];
   let imgAlt = groupName[group] + elementalName[element];
 

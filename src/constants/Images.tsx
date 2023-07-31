@@ -11,7 +11,7 @@ import eFlowerSrc from '#/elemental-images/flower.svg';
 import eThunderSrc from '#/elemental-images/thunder.svg';
 import eWaterSrc from '#/elemental-images/water.svg';
 
-export const groupImages = {
+export const groupImages: {[key: string]: string;}  = {
   tigress: groupTigerSrc,
   monkey: groupMonkeySrc,
   crane: groupCraneSrc,
@@ -19,7 +19,7 @@ export const groupImages = {
   viper: groupViperSrc,
 };
 
-export const groupName = {
+export const groupName: {[key: string]: string;} = {
   tigress: 'พยัคฆ์',
   monkey: 'วานร',
   crane: 'กระเรียน',
@@ -27,7 +27,7 @@ export const groupName = {
   viper: 'อสรพิษ',
 };
 
-export const elementalName = {
+export const elementalName: {[key: string]: string;} = {
   water: 'วารี',
   fire: 'อัคคี',
   earth: 'ขุนเขา',
@@ -36,7 +36,7 @@ export const elementalName = {
   wind: 'พระพราย',
 };
 
-export const elementalImages = {
+export const elementalImages:{[key: string]: string;} = {
   water: eWaterSrc,
   fire: eFireSrc,
   earth: eEarthSrc,
