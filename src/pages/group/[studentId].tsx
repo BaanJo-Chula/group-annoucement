@@ -18,17 +18,21 @@ export default function group() {
   const router = useRouter();
   const  studentId = router.query.studentId as string;
 
-    let group:string = 'mantis';
-    let element:string = 'water';
-  // if(studentId in data){
-  //   // group = data[studentId]
-  // }
+  let group = '';
+  let element = '';
+  interface Data {
+    [key: string]: { group: string; elemental: string };
+  }
 
-  
+  const studentData:Data = data ;
+  if(studentId in studentData){
+    group = studentData[studentId].group;
+    element = studentData[studentId].elemental;
+  }
 
   let imgSrc = groupImages[group] || "";
-  let frameSrc = elementalImages[element];
-  let imgAlt = groupName[group] + elementalName[element];
+  let frameSrc = elementalImages[element] || "";
+  let imgAlt = groupName[group] + elementalName[element] || "";
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center pb-32">
