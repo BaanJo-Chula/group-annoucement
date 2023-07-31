@@ -1,7 +1,14 @@
 import desktopBg from '#/desktop-bg.svg';
 import logo from '#/kungjo-panda.jpg';
+import { useState } from 'react';
 
 export default function Home() {
+  const [value, setValue] = useState('');
+
+  function handleClick() {
+    alert(value);
+  }
+
   return (
     <div
       className="flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-fixed bg-no-repeat"
@@ -18,11 +25,18 @@ export default function Home() {
             className="h-1/3 w-full rounded-xl bg-white/30 indent-2 text-xl text-black sm:rounded-2xl sm:indent-3"
             type="text"
             placeholder="66XXXXXXXX"
+            value={value}
+            onChange={(e) => {
+              setValue(e.currentTarget.value);
+            }}
           ></input>
         </div>
-        <div className="absolute bottom-5 flex h-1/6 w-1/4 min-w-fit items-center justify-center rounded-lg bg-white font-salapao text-xl text-black sm:bottom-8 sm:text-2xl">
+        <button
+          className="absolute bottom-5 flex h-1/6 w-1/4 min-w-fit items-center justify-center rounded-lg bg-white font-salapao text-xl text-black sm:bottom-8 sm:text-2xl"
+          onClick={handleClick}
+        >
           login
-        </div>
+        </button>
       </div>
     </div>
   );
