@@ -4,12 +4,22 @@ import {
   groupImages,
   groupName,
 } from '@/constants/Images';
+
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { Icon } from '@iconify/react';
-import Link from 'next/link';
+import data from '../../constants/data.json';
+
 
 export default function group() {
+  
+  const router = useRouter();
+  const { studentId } = router.query;
+  // console.log(studentId);
+  
+
   const group = 'mantis';
   const element = 'earth';
 
