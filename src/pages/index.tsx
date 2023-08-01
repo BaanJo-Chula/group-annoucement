@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center px-4 pb-32">
+    <div className="relative flex min-h-screen w-full items-center justify-center px-8 pb-16">
       <Image
         src={background}
         alt=""
@@ -50,11 +50,11 @@ export default function Home() {
             alt=""
           />
         </div>
-        <form className="flex w-full flex-col items-center gap-2 px-8 text-center font-salapao text-2xl text-white">
+        <form className="flex w-full flex-col items-center gap-2 px-8 text-center font-salapao text-xl text-white">
           <label htmlFor="studentId">เลขรหัสนิสิต</label>
           <input
             name="studentId"
-            className="w-full rounded-3xl bg-white/30 px-4 py-2 text-xl tracking-wider text-white outline-none placeholder:text-white/40"
+            className="w-full rounded-3xl bg-white/30 px-4 py-1 text-lg tracking-wider text-white outline-none placeholder:text-white/40"
             type="text"
             placeholder="66xxxxxxxx"
             value={value}
@@ -63,7 +63,7 @@ export default function Home() {
             }}
           />
           <button
-            className="mt-4 w-fit rounded-3xl bg-white px-2 py-1 font-salapao text-xl text-black outline-none ring-4 ring-white/40"
+            className="mt-4 w-fit rounded-3xl bg-white px-4 py-1 font-salapao text-lg text-black outline-none ring-4 ring-white/40"
             type="submit"
             onClick={handleSubmit}
           >

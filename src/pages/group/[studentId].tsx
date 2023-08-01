@@ -50,7 +50,7 @@ export default function Group() {
   }, [router]);
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center justify-center px-4 pb-32">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center px-4 pb-16">
       <Image
         src={background}
         alt=""
