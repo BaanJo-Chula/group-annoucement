@@ -1,18 +1,22 @@
-import desktopBg from '#/desktop-bg.svg';
-import logo from '#/kungjo-panda.jpg';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import { useToast } from '@/components/Toast';
 import dataJSON from '@/constants/data.json';
-import { Data } from './group/[studentId]';
+import type { Data } from './group/[studentId]';
+
+import background from '#/background.svg';
+import logo from '#/kungjo-panda.svg';
 
 export default function Home() {
   const router = useRouter();
   const [value, setValue] = useState('');
   const toast = useToast();
 
-  function handleClick() {
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+
     if (!value) {
       toast?.setToast('error', 'Please enter your student ID');
       return;
@@ -30,33 +34,42 @@ export default function Home() {
   }
 
   return (
-    <div
-      className="flex min-h-screen w-full flex-col items-center justify-center bg-cover bg-fixed bg-no-repeat"
-      style={{ backgroundImage: `url(${desktopBg.src})` }}
-    >
-      <div className="relative flex h-52 max-h-96 w-4/6 max-w-lg flex-col items-center justify-center rounded-3xl border-4 border-solid border-red/20 bg-red sm:h-64">
-        <div
-          className="absolute -top-14 h-28 w-28 rounded-full bg-cover sm:-top-16 sm:h-32 sm:w-32"
-          style={{ backgroundImage: `url(${logo.src})` }}
-        ></div>
-        <div className="flex h-1/3 w-5/6 min-w-fit flex-col space-y-2 font-salapao text-xl text-white sm:text-center sm:text-2xl">
-          <div>เลขรหัสนิสิต</div>
+    <div className="relative flex min-h-screen w-full items-center justify-center px-4 pb-32">
+      <Image
+        src={background}
+        alt=""
+        fill
+        className="-z-50 select-none object-cover object-top"
+      />
+      <div className="relative flex h-64 w-full max-w-lg flex-col items-center gap-4 rounded-3xl bg-red pt-16 ring-8 ring-red/20">
+        <div className="absolute left-1/2 top-0 aspect-square w-32 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full">
+          <Image
+            src={logo}
+            fill
+            className="object-cover object-center"
+            alt=""
+          />
+        </div>
+        <form className="flex w-full flex-col items-center gap-2 px-8 text-center font-salapao text-2xl text-white">
+          <label htmlFor="studentId">เลขรหัสนิสิต</label>
           <input
-            className="h-1/3 w-full rounded-xl bg-white/30 indent-2 text-xl text-black sm:rounded-2xl sm:indent-3"
+            name="studentId"
+            className="w-full rounded-3xl bg-white/30 px-4 py-2 text-xl tracking-wider text-white outline-none placeholder:text-white/40"
             type="text"
-            placeholder="66XXXXXXXX"
+            placeholder="66xxxxxxxx"
             value={value}
             onChange={(e) => {
               setValue(e.currentTarget.value);
             }}
-          ></input>
-        </div>
-        <button
-          className="absolute bottom-5 flex h-1/6 w-1/4 min-w-fit items-center justify-center rounded-lg bg-white font-salapao text-xl text-black sm:bottom-8 sm:text-2xl"
-          onClick={handleClick}
-        >
-          login
-        </button>
+          />
+          <button
+            className="mt-4 w-fit rounded-3xl bg-white px-2 py-1 font-salapao text-xl text-black outline-none ring-4 ring-white/40"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            ตรวจสอบ
+          </button>
+        </form>
       </div>
     </div>
   );
