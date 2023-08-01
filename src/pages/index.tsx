@@ -1,12 +1,32 @@
 import desktopBg from '#/desktop-bg.svg';
 import logo from '#/kungjo-panda.jpg';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
+import { useToast } from '@/components/Toast';
+import dataJSON from '@/constants/data.json';
+import { Data } from './group/[studentId]';
+
 export default function Home() {
+  const router = useRouter();
   const [value, setValue] = useState('');
+  const toast = useToast();
 
   function handleClick() {
-    alert(value);
+    if (!value) {
+      toast?.setToast('error', 'Please enter your student ID');
+      return;
+    }
+    if (value.length !== 10 || isNaN(Number(value))) {
+      toast?.setToast('error', 'Student ID must be number and 10 digits');
+      return;
+    }
+    const data: Data = dataJSON;
+    if (data[value] === undefined) {
+      toast?.setToast('error', `${value} is not found`);
+      return;
+    }
+    router.push(`/group/${value}`);
   }
 
   return (
